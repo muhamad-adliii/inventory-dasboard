@@ -1,34 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>belajar aja</title>
     <!-- style -->
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="noCam.jpg">
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-     <!-- feather icons -->
-     <script src="https://unpkg.com/feather-icons"></script>
+    <!--icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
+
 <body>
-    <!-- navbar -->
-     <nav>
-        
-     </nav>
+    <div class="layout">
 
+        <!-- sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <i class="bi bi-tools"></i>
+                <span class="text-brand">Inventory</span>
+            </div>
+            <ul class="sidebar-menu top">
+                <li class="active">
+                    <a href="#">
+                        <i class="bi bi-house-fill"></i>
+                        <span class="text">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-archive-fill"></i>
+                        <span class="text">Inventory</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-cart"></i>
+                        <span class="text">Orders</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-wrench"></i>
+                        <span class="text">Support</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bi bi-gear-fill"></i>
+                        <span class="text">Setting</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
 
+        <section class="content">
+            <nav>
+                <div class="navbar-left">
+                    <i class="bi bi-list"></i>
+                    <form action="#">
+                        <div class="form-input">
+                            <input type="search" placeholder="Search....">
+                            <button type="submit" class="search-btn"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="navbar-right">
+                    <input type="checkbox" class="checkbox" id="switch-mode" hidden />
+                    <label class="switch-lm" for="switch-mode">
+                        <i class="bi bi-moon"></i>
+                        <i class="bi bi-sun"></i>
+                        <div class="ball"></div>
+                    </label>
+                    <!-- profile menu -->
+                    <a href="#" class="profile" id="profileIcon">
+                        <img src="https://placehold.co/600x400/png" alt="profile">
+                    </a>
+                    <div class="profile-menu" id="profileMenu">
+                        <ul>
+                            <li><a href="#">My Profile</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Log Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
 
+            <!-- main -->
+            <main>
+                <div class="head-title">
+                    <div class="left">
+                        <h1>Dashboard</h1>
+                        <ul class="breadcrumb">
+                            <li>
+                                <a href="#">Dashboard</a>
+                            </li>
+                            <li><i class='bi bi-chevron-right'></i></li>
+                            <li>
+                                <a class="active" href="#">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
+                <div class="table-data">
+                    <div class="order">
+                        <div class="head">
+                            <h3>Recent Orders</h3>
+                            <i class='bx bx-search'></i>
+                            <i class='bx bx-filter'></i>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Date Order</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img src="https://placehold.co/600x400/png">
+                                        <p>Micheal John</p>
+                                    </td>
+                                    <td>18-10-2021</td>
+                                    <td><span class="status completed">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="https://placehold.co/600x400/png">
+                                        <p>Ryan Doe</p>
+                                    </td>
+                                    <td>01-06-2022</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="https://placehold.co/600x400/png">
+                                        <p>Tarry White</p>
+                                    </td>
+                                    <td>14-10-2021</td>
+                                    <td><span class="status process">Process</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="https://placehold.co/600x400/png">
+                                        <p>Selma</p>
+                                    </td>
+                                    <td>01-02-2023</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="https://placehold.co/600x400/png">
+                                        <p>Andreas Doe</p>
+                                    </td>
+                                    <td>31-10-2021</td>
+                                    <td><span class="status completed">Completed</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </section>
+    </div>
 
-    <!-- icon -->
-    <script>
-        feather.replace();
-      </script>
-
-      <script src="script.js"></script>
+    <script src="js/ui.js"></script>
 </body>
+
 </html>
