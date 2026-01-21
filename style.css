@@ -361,7 +361,7 @@ body {
   animation: shakeOn 0.7s;
 }
 
-.content main{
+.content main {
   width: 100%;
   padding: 36px 24px;
   font-family: 36px 24px;
@@ -370,7 +370,7 @@ body {
   overflow-y: auto;
 }
 
-.content main .head-title{
+.content main .head-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -378,11 +378,19 @@ body {
   flex-wrap: wrap;
 }
 
-.head-title .left h1{
+.head-title .left{
+  width: 100%;
+}
+.head-title .left h1 {
   font-size: 36px;
   font-weight: 600;
   margin-bottom: 10px;
   color: var(--dark);
+}
+.left-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .breadcrumb {
@@ -392,20 +400,115 @@ body {
   gap: 16px;
 }
 
-.breadcrumb li{
+.add-items{
+  padding: 10px 25px;
+}
+
+.breadcrumb li {
   color: var(--dark);
 }
 
-.breadcrumb .bi-chevron-right{
+.breadcrumb .bi-chevron-right {
   text-align: center;
 }
 
-.breadcrumb li a{
+.breadcrumb li a {
   color: var(--dark-grey);
   pointer-events: none;
 }
 
-.breadcrumb li a.active{
+.breadcrumb li a.active {
   color: var(--blue);
   pointer-events: unset;
+}
+
+/* table data */
+.content .table-data {
+  gap: 24px;
+  margin-top: 24px;
+  width: 100%;
+  color: var(--dark);
+}
+
+.content .table-data > div {
+  border-radius: 20px;
+  background: var(--light);
+  padding: 24px;
+  overflow-x: auto;
+}
+
+.content .table-data .head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.content .table-data .head h3 {
+  margin-right: auto;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.content .table-data .head .bi {
+  cursor: pointer;
+}
+
+.content .table-data .order {
+  flex-grow: 1;
+  flex-basis: 500px;
+}
+
+.content .table-data .order table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.content .table-data .order table th {
+  padding-bottom: 12px;
+  font-size: 13px;
+  text-align: left;
+  border-bottom: 1px solid var(--grey);
+}
+
+.content .table-data .order table td {
+  padding: 16px 0;
+}
+
+.content .table-data .order table tr td:first-child {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-left: 6px;
+}
+
+.content .table-data .order table td img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.content .table-data .order table tbody tr:hover {
+  background: var(--grey);
+}
+
+.content .table-data .status {
+  padding: 10px 25px;
+  font-size: 12px;
+  color: var(--dark);
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.content .table-data .status.completed {
+  background: var(--blue);
+}
+
+.content .table-data .status.pending {
+  background: var(--yellow);
+}
+
+.content .table-data .status.process {
+  background: var(--orange);
 }
